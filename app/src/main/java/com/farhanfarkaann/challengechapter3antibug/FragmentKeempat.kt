@@ -23,7 +23,7 @@ class FragmentKeempat : Fragment() {
         const val GRAVITASI= "GRAVITASI"
         const val KECEPATAN = "KECEPATAN"
         const val WAKTU = "WAKTU"
-        val NAMA  = "NAMA"
+        const val NAMA  = "NAMA"
         const val HASIL = "HASIL"
     }
 

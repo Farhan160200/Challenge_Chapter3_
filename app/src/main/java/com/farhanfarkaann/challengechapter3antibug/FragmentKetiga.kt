@@ -38,32 +38,27 @@ class FragmentKetiga : Fragment() {
         binding.tvName.text = myName
         nameOne.putString("myName", myName)
 
-//        binding.tvKecepatan.visibility = View.GONE
-//        binding.tvWaktuTempuh.visibility = View.GONE
-//        binding.tvGravitasi.visibility = View.GONE
-//        binding.tvHasil.visibility = View.GONE
-//
-
 
         val bundle = this.arguments
         val tKecepatan  = bundle?.getInt(FragmentKeempat.KECEPATAN)
         val tWaktuTempuh  = bundle?.getInt(FragmentKeempat.WAKTU)
         val tGravitasi  = bundle?.getInt(FragmentKeempat.GRAVITASI)
-        val tHasil = bundle?.getString(FragmentKeempat.HASIL).toString()
+        val tHasil = bundle?.getString(FragmentKeempat.HASIL)
 
 
-        if(bundle != null){
+        if(bundle != null && tHasil != null){
             binding.run{
-                tvName.text = bundle?.getString(FragmentKeempat.NAMA)
+                tvName.text = bundle.getString(FragmentKeempat.NAMA)
                 tvKecepatan.text = "Kecepatan Anda : $tKecepatan Km/Jam"
                 tvWaktuTempuh.text = "Waktu Tempuh Anda : $tWaktuTempuh detik"
-                tvGravitasi.text = "Gravitasi BUMI $tGravitasi m/s2"
+                tvGravitasi.text = "Gravitasi Bumi :  $tGravitasi m/s2"
                 tvHasil.text = "Hasil Ketinggian Adalah: $tHasil meter"
+                btnGts4.visibility = View.GONE
             }
             binding.tvName.text = myName
 //            binding.tvHasil.text.toString()
         }else {
-                binding.tvName.text = args.myName
+                binding.tvName.text = bundle?.getString(FragmentKeempat.NAMA)
                 binding.tvKecepatan.visibility = View.GONE
                 binding.tvWaktuTempuh.visibility = View.GONE
                 binding.tvGravitasi.visibility = View.GONE
@@ -74,6 +69,5 @@ class FragmentKetiga : Fragment() {
             it.findNavController().navigate(R.id.action_fragmentKetiga_to_fragmentKeempat,nameOne )
 
         }
-
     }
 }
