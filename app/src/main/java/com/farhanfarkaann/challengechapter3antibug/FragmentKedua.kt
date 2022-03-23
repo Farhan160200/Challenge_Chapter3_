@@ -27,7 +27,7 @@ class FragmentKedua : Fragment() {
 
 
         binding.btnGts3.setOnClickListener {
-            val inputName = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga()
+            val inputName = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga(binding.etName.text.toString())
 //            val inputName = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga()
             findNavController().navigate(inputName)
         }

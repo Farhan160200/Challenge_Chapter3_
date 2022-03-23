@@ -18,7 +18,6 @@ class FragmentKetiga : Fragment() {
     private var bind : FragmentKetigaBinding? = null
     private val binding get() = bind!!
 
-
     val args : FragmentKetigaArgs by navArgs()
 
     override fun onCreateView(
@@ -34,40 +33,35 @@ class FragmentKetiga : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val myName = args.myName
 
-        val nameOne = Bundle()
-        binding.tvName.text = myName
-        nameOne.putString("myName", myName)
-
-
-        val bundle = this.arguments
+        val bundle = arguments
         val tKecepatan  = bundle?.getInt(FragmentKeempat.KECEPATAN)
         val tWaktuTempuh  = bundle?.getInt(FragmentKeempat.WAKTU)
         val tGravitasi  = bundle?.getInt(FragmentKeempat.GRAVITASI)
         val tHasil = bundle?.getString(FragmentKeempat.HASIL)
+        val tNama = bundle?.getString(FragmentKeempat.NAMA)
 
 
         if(bundle != null && tHasil != null){
             binding.run{
-                tvName.text = bundle.getString(FragmentKeempat.NAMA)
+                tvName.text = "Nama Anda : $tNama"
                 tvKecepatan.text = "Kecepatan Anda : $tKecepatan Km/Jam"
                 tvWaktuTempuh.text = "Waktu Tempuh Anda : $tWaktuTempuh detik"
                 tvGravitasi.text = "Gravitasi Bumi :  $tGravitasi m/s2"
                 tvHasil.text = "Hasil Ketinggian Adalah: $tHasil meter"
                 btnGts4.visibility = View.GONE
             }
-            binding.tvName.text = myName
-//            binding.tvHasil.text.toString()
+
         }else {
-                binding.tvName.text = bundle?.getString(FragmentKeempat.NAMA)
+                binding.tvName.text = myName
                 binding.tvKecepatan.visibility = View.GONE
                 binding.tvWaktuTempuh.visibility = View.GONE
                 binding.tvGravitasi.visibility = View.GONE
                 binding.tvHasil.visibility = View.GONE
         }
-        binding.tvName.text = myName
-        binding.btnGts4.setOnClickListener {
-            it.findNavController().navigate(R.id.action_fragmentKetiga_to_fragmentKeempat,nameOne )
 
+        binding.btnGts4.setOnClickListener {
+            val sendingData = FragmentKetigaDirections.actionFragmentKetigaToFragmentKeempat(myName)
+            it.findNavController().navigate(sendingData)
         }
     }
 }

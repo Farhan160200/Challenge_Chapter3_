@@ -16,7 +16,7 @@ import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKeempatBi
 class FragmentKeempat : Fragment() {
     private lateinit var binding: FragmentKeempatBinding
 
-//    val args: FragmentKeempatArgs by navArgs()
+    val args : FragmentKeempatArgs by navArgs()
 
 
     companion object {
@@ -40,8 +40,7 @@ class FragmentKeempat : Fragment() {
 
         binding.btnGts5.setOnClickListener {
 
-            val bundlesebelah = this.arguments
-            val nama  = bundlesebelah?.getString("myName")
+            val nama  = args.myNameNameName
             val kecepatan = binding.etKecepatan.text.toString().toInt()
             val waktu = binding.etWaktuTempuh.text.toString().toInt()
             val gravitasi = binding.etGravitasi.text.toString().toInt()
@@ -61,8 +60,7 @@ class FragmentKeempat : Fragment() {
                 Toast.makeText(requireContext(), "Tidak boleh Kosong", Toast.LENGTH_SHORT).show()
             }
 
-
-            it.findNavController().navigate(R.id.action_fragmentKeempat_to_fragmentKetiga, bundle)
+            findNavController().navigate(R.id.action_fragmentKeempat_to_fragmentKetiga, bundle)
         }
     }
 }
