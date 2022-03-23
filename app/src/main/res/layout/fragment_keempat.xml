@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentKeempat"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pop_empat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Screen 4"
+        android:textAlignment="center"
+        android:layout_marginTop="16dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/et_kecepatan"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:hint="Kecepatan awal :                 km/jam"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/et_waktu_tempuh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_waktu_tempuh"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:hint="Waktu Tempuh:                      detik"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/et_gravitasi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_gravitasi"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:hint="Gravitasi :                                m/s2"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btn_gts_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_gts_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go To Screen 5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
