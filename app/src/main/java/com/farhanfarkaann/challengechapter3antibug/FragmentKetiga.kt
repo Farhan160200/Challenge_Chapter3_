@@ -13,7 +13,7 @@ import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKetigaBin
 
 
 class FragmentKetiga : Fragment() {
-    //    private lateinit var binding: FragmentKetigaBinding
+
     private var bind : FragmentKetigaBinding? = null
     private val binding get() = bind!!
 
@@ -52,7 +52,7 @@ class FragmentKetiga : Fragment() {
             }
 
         }else {
-                binding.tvName.text = myName
+                binding.tvName.text = "Nama Anda : $myName"
                 binding.tvKecepatan.visibility = View.GONE
                 binding.tvWaktuTempuh.visibility = View.GONE
                 binding.tvGravitasi.visibility = View.GONE
@@ -68,5 +68,4 @@ class FragmentKetiga : Fragment() {
         super.onDestroyView()
         bind  = null
     }
-
 }

@@ -12,7 +12,6 @@ import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKeduaBind
 import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKetigaBinding
 
 class FragmentKedua : Fragment() {
-//    private lateinit var binding : FragmentKeduaBinding
 
     private var bind : FragmentKeduaBinding? = null
     private val binding get() = bind!!
@@ -32,7 +31,6 @@ class FragmentKedua : Fragment() {
 
         binding.btnGts3.setOnClickListener {
             val inputName = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga(binding.etName.text.toString())
-//            val inputName = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga()
             findNavController().navigate(inputName)
         }
     }
