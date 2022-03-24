@@ -12,7 +12,7 @@ import androidx.navigation.findNavController
 import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKetigaBinding
 
 
-class FragmentKetiga : Fragment() {
+ class FragmentKetiga : Fragment() {
 
     private var bind : FragmentKetigaBinding? = null
     private val binding get() = bind!!

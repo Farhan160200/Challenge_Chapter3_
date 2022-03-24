@@ -11,7 +11,7 @@ import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKesatuBin
 
 class FragmentKesatu : Fragment() {
     private var bind : FragmentKesatuBinding? = null
-    private val binding get() = bind!!
+     private val binding get() = bind!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

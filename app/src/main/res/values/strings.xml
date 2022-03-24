@@ -15,8 +15,8 @@
     <string name="screen_1">Screen 1</string>
     <string name="go_to_screen_2">Go To Screen 2</string>
     <string name="screen_4">Screen 4</string>
-    <string name="kecepatan_awal_km_jam">Kecepatan awal : km/jam</string>
-    <string name="waktu_tempuh_detik">Waktu Tempuh: detik</string>
+    <string name="kecepatan_awal_km_jam">Kecepatan awal : m/s</string>
+    <string name="waktu_tempuh_detik">Waktu Tempuh Tertinggi : detik</string>
     <string name="gravitasi_m_s2">Gravitasi : m/s2</string>
     <string name="go_to_screen_5">Back To Screen 3</string>
     <string name="aplikasi_menghitung_jarak_ketinggian">Aplikasi Menghitung Jarak Ketinggian</string>

@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKeduaBinding
 
-class FragmentKedua : Fragment() {
+ class FragmentKedua : Fragment() {
 
     private var bind: FragmentKeduaBinding? = null
     private val binding get() = bind!!
@@ -20,7 +20,7 @@ class FragmentKedua : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         bind = FragmentKeduaBinding.inflate(inflater, container, false)
         return binding.root
     }
