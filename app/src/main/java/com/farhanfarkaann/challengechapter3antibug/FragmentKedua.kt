@@ -9,9 +9,13 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKeduaBinding
+import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKetigaBinding
 
 class FragmentKedua : Fragment() {
-    private lateinit var binding : FragmentKeduaBinding
+//    private lateinit var binding : FragmentKeduaBinding
+
+    private var bind : FragmentKeduaBinding? = null
+    private val binding get() = bind!!
 
 
     override fun onCreateView(
@@ -19,7 +23,7 @@ class FragmentKedua : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentKeduaBinding.inflate(layoutInflater)
+        bind = FragmentKeduaBinding.inflate(inflater,container,false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -32,4 +36,9 @@ class FragmentKedua : Fragment() {
             findNavController().navigate(inputName)
         }
     }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        bind  = null
+    }
+
 }

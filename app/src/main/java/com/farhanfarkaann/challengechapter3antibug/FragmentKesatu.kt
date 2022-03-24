@@ -7,17 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKesatuBinding
+import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKetigaBinding
 
 
 class FragmentKesatu : Fragment() {
-    private lateinit var binding: FragmentKesatuBinding
-
-
+    private var bind : FragmentKesatuBinding? = null
+    private val binding get() = bind!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentKesatuBinding.inflate(layoutInflater)
+        bind = FragmentKesatuBinding.inflate(inflater,container,false)
         return binding.root
 
     }
@@ -30,4 +30,10 @@ class FragmentKesatu : Fragment() {
         }
 
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        bind  = null
+    }
+
 }

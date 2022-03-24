@@ -1,13 +1,12 @@
 package com.farhanfarkaann.challengechapter3antibug
 
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.telephony.TelephonyCallback
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.navigation.fragment.navArgs
 import androidx.navigation.findNavController
 import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKetigaBinding
@@ -24,11 +23,12 @@ class FragmentKetiga : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         bind = FragmentKetigaBinding.inflate(inflater,container,false)
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val myName = args.myName
@@ -64,4 +64,9 @@ class FragmentKetiga : Fragment() {
             it.findNavController().navigate(sendingData)
         }
     }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        bind  = null
+    }
+
 }
