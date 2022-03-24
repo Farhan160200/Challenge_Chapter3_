@@ -17,7 +17,7 @@ class FragmentKetiga : Fragment() {
     private var bind : FragmentKetigaBinding? = null
     private val binding get() = bind!!
 
-    val args : FragmentKetigaArgs by navArgs()
+     val args : FragmentKetigaArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,

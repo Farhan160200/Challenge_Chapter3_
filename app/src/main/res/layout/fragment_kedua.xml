@@ -43,7 +43,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_gts_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="" />
+        android:autofillHints=""
+        android:inputType="" />
 
     <Button
         android:id="@+id/btn_gts_3"

@@ -6,14 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKeduaBinding
-import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKetigaBinding
 
 class FragmentKedua : Fragment() {
 
-    private var bind : FragmentKeduaBinding? = null
+    private var bind: FragmentKeduaBinding? = null
     private val binding get() = bind!!
 
 
@@ -22,18 +21,27 @@ class FragmentKedua : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        bind = FragmentKeduaBinding.inflate(inflater,container,false)
+        bind = FragmentKeduaBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
 
         binding.btnGts3.setOnClickListener {
-            val inputName = FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga(binding.etName.text.toString())
+
+            if (binding.etName.text.toString().isNotEmpty()) {
+            } else {
+                Toast.makeText(context, "Tidak Boloh Kosong", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            val inputName =
+                FragmentKeduaDirections.actionFragmentKeduaToFragmentKetiga(binding.etName.text.toString())
             findNavController().navigate(inputName)
         }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         bind  = null

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKeempatBinding
@@ -45,13 +46,18 @@ class FragmentKeempat : Fragment() {
 
 
             val bundle = Bundle()
+
                 bundle.putString(NAMA, nama)
                 bundle.putInt(KECEPATAN, kecepatan)
                 bundle.putInt(WAKTU, waktu)
                 bundle.putInt(GRAVITASI, gravitasi)
                 bundle.putString(HASIL, hasil)
 
-            findNavController().navigate(R.id.action_fragmentKeempat_to_fragmentKetiga, bundle,)
+
+            findNavController().navigate(R.id.action_fragmentKeempat_to_fragmentKetiga, bundle)
+
+
+
         }
     }
     override fun onDestroyView() {

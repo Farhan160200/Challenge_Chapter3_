@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKesatuBinding
-import com.farhanfarkaann.challengechapter3antibug.databinding.FragmentKetigaBinding
 
 
 class FragmentKesatu : Fragment() {
