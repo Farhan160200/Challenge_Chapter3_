@@ -47,7 +47,7 @@ class FragmentKetiga : Fragment() {
                 tvKecepatan.text = "Kecepatan Anda : $tKecepatan Km/Jam"
                 tvWaktuTempuh.text = "Waktu Tempuh Anda : $tWaktuTempuh detik"
                 tvGravitasi.text = "Gravitasi Bumi :  $tGravitasi m/s2"
-                tvHasil.text = "Hasil Ketinggian Adalah: $tHasil meter"
+                tvHasil.text = "Hasil Ketinggian : $tHasil meter"
                 btnGts4.visibility = View.GONE
             }
 

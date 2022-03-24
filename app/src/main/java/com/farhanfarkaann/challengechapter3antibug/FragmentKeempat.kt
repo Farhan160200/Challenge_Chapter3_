@@ -19,6 +19,7 @@ class FragmentKeempat : Fragment() {
     val args : FragmentKeempatArgs by navArgs()
 
 
+
     companion object {
         const val GRAVITASI= "GRAVITASI"
         const val KECEPATAN = "KECEPATAN"
@@ -60,7 +61,7 @@ class FragmentKeempat : Fragment() {
                 Toast.makeText(requireContext(), "Tidak boleh Kosong", Toast.LENGTH_SHORT).show()
             }
 
-            findNavController().navigate(R.id.action_fragmentKeempat_to_fragmentKetiga, bundle)
+            findNavController().navigate(R.id.action_fragmentKeempat_to_fragmentKetiga, bundle,)
         }
     }
 }
